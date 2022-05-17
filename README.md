@@ -1,7 +1,7 @@
 # Script para generar facturas AFIP
 
-1 - Crear y completar datos en archivo de variables de entorno (.env)
-2 - Ejecutar archivo index.js con alguno de los siguientes comandos:
+- Crear y completar datos en archivo de variables de entorno (.env)
+- Ejecutar archivo index.js con alguno de los siguientes comandos:
 
 ```bash
 generar
