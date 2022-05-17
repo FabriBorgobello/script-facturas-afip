@@ -8,6 +8,8 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
-  "rules": { "prettier/prettier": "error" },
+  "rules": {
+    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+  },
   "plugins": ["prettier"]
 }

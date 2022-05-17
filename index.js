@@ -19,10 +19,17 @@ const { FACTURA } = require("./data");
     !FACTURA.RECEPTOR.NUMERO_DOCUMENTO ||
     !FACTURA.RECEPTOR.DOMICILIO ||
     !FACTURA.CONCEPTO.PERIODO_DESDE ||
-    !FACTURA.CONCEPTO.PERIODO_HASTA
+    !FACTURA.CONCEPTO.PERIODO_HASTA ||
+    !FACTURA.CONCEPTO.PRECIO_POR_UNIDAD
   ) {
     throw new Error(
       "Por favor complete los datos requeridos en el archivo .env"
+    );
+  }
+
+  if (Number(FACTURA.CONCEPTO.PRECIO_POR_UNIDAD > 100_000)) {
+    throw new Error(
+      "El precio por unidad es mayor al límite permitido ($ 100.000)"
     );
   }
 

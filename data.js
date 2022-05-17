@@ -6,16 +6,16 @@ const FACTURA = {
     PASSWORD: process.env.PASSWORD,
   },
   RECEPTOR: {
-    CONDICION_FRENTE_A_IVA: "Consumidor Final", // "IVA Responsable Inscripto" / "Consumidor Final"
-    TIPO_DOCUMENTO: "CUIT", // "CUIT" / "DNI"
-    NUMERO_DOCUMENTO: process.env.CUIT_RECEPTOR,
-    DOMICILIO: process.env.DOMICILIO_RECEPTOR,
+    CONDICION_FRENTE_A_IVA: process.env.CONDICION_FRENTE_A_IVA, // "IVA Responsable Inscripto" / "Consumidor Final"
+    TIPO_DOCUMENTO: process.env.TIPO_DOCUMENTO, // "CUIT" / "DNI"
+    NUMERO_DOCUMENTO: process.env.NUMERO_DOCUMENTO,
+    DOMICILIO: process.env.DOMICILIO,
   },
   CONCEPTO: {
-    TIPO: "SERVICIOS", // "PRODUCTOS" / "SERVICIOS" / "PRODUCTOS Y SERVICIOS"
-    DESCRIPCION: "Locación de inmueble",
-    CANTIDAD: "1",
-    PRECIO_POR_UNIDAD: process.env.TOTAL,
+    TIPO: process.env.TIPO, // "PRODUCTOS" / "SERVICIOS" / "PRODUCTOS Y SERVICIOS"
+    DESCRIPCION: process.env.DESCRIPCION,
+    CANTIDAD: process.env.CANTIDAD,
+    PRECIO_POR_UNIDAD: process.env.PRECIO_POR_UNIDAD,
     PERIODO_DESDE: process.env.PERIODO_DESDE,
     PERIODO_HASTA: process.env.PERIODO_HASTA,
   },
