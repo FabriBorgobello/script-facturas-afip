@@ -1,0 +1,25 @@
+{
+  "name": "script_facturas_afip",
+  "version": "1.0.0",
+  "description": "Script para generar facturas AFIP",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "puppeteer": "^13.5.1"
+  },
+  "bin": {
+    "generar": "index.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0"
+  }
+}
