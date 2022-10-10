@@ -34,12 +34,9 @@ const { FACTURA } = require("./data");
   }
 
   // Ingresar a AFIP
-  await page.goto("https://www.afip.gob.ar/", { waitUntil: "load" });
-
-  const accessBtn = await page.waitForSelector(
-    "#claveFiscal > div > div > div > div > div:nth-child(2) > a"
-  );
-  accessBtn.click();
+  await page.goto("https://auth.afip.gob.ar/contribuyente_/login.xhtml", {
+    waitUntil: "load",
+  });
 
   // Login
   const userInput = await page.waitForSelector("#F1\\:username");
@@ -73,9 +70,9 @@ const { FACTURA } = require("./data");
   await puntoDeVenta.select("#puntodeventa", "1");
 
   const tipoComprobante = await newPage.waitForSelector("#universocomprobante");
-  await tipoComprobante.type("Factura C");
+  await tipoComprobante.type("2");
 
-  await newPage.waitForTimeout(500);
+  await newPage.waitForTimeout(1000);
   await newPage.click("#contenido > form > input[type=button]:nth-child(4)");
 
   // Datos de emisión
